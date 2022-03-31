@@ -4,8 +4,7 @@ public class FollowPath : MonoBehaviour
 {
 
     // Array of waypoints to walk from one to the next one
-    [SerializeField]
-    public Transform[] waypoints;
+    private Transform[] waypoints;
 
     // Walk speed that can be set in Inspector
     [SerializeField]
@@ -22,8 +21,8 @@ public class FollowPath : MonoBehaviour
     {
 
         // Set position of Enemy as position of the first waypoint
-        transform.position = waypoints[waypointIndex].transform.position;
         Setwaypoints();
+        transform.position = waypoints[waypointIndex].transform.position;
     }
 
     // Update is called once per frame
